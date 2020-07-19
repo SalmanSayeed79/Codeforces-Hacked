@@ -10,9 +10,16 @@
 //          MAIN CONTAINER
 //
 //==============================================================//
+body{
+    background-color: rgb(250, 94, 54);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
 
+}
 .main_container{
-    width: 100%;
+    width: 80vw;
     min-height: 100vh ;
     background-color: rgb(250, 94, 54);
     color: white;
@@ -89,7 +96,10 @@ button:hover{
     color: white;
     background-color: rgb(240, 60, 60);
 }
-
+#table{
+    margin-top:5vh;
+    width: 90vw;
+}
 
 @media all and (max-width:850px){
 

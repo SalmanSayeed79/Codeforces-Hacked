@@ -15,10 +15,12 @@ button.addEventListener('click',()=>{
     let count_value=count.value;
     let url=`https://codeforces.com/api/user.status?handle=${handle_value}&from=1&count=${count_value}`
     fetch(url)
+
         .then(response=>{
             return response.json();
         })
         .then(data=>{
+            console.log(data);
             data=data['result']
             //===============================================================================//
             //
@@ -90,7 +92,7 @@ button.addEventListener('click',()=>{
            
         })
 
- console.log(prb_name);
+console.log(prb_name);
 console.log(prb_rating);
 console.log(prb_id);
 })

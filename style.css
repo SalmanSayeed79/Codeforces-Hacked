@@ -5,8 +5,20 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  background-color: #fa5e36;
+  width: 100vw;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .main_container {
-  width: 100%;
+  width: 80vw;
   min-height: 100vh;
   background-color: #fa5e36;
   color: white;
@@ -97,6 +109,11 @@ button {
 button:hover {
   color: white;
   background-color: #f03c3c;
+}
+
+#table {
+  margin-top: 5vh;
+  width: 90vw;
 }
 
 @media all and (max-width: 850px) {
