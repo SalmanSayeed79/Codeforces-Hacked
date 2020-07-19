@@ -93,7 +93,7 @@ button.addEventListener('click',()=>{
 
                 }
             }
-           
+           button.parentNode.removeChild(button);
             }else{
                 alert(`Sorry. Couldn't find data. Please try again`);
             }
