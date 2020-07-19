@@ -15,11 +15,15 @@ button.addEventListener('click',()=>{
     let count_value=count.value;
     let url=`https://codeforces.com/api/user.status?handle=${handle_value}&from=1&count=${count_value}`
     fetch(url)
+        .catch(()=>{
+            alert("Couldn't fetch data. Please try again");    
+        })
 
         .then(response=>{
             return response.json();
         })
         .then(data=>{
+            if(data['status']=='OK'){
             console.log(data);
             data=data['result']
             //===============================================================================//
@@ -28,7 +32,7 @@ button.addEventListener('click',()=>{
             //           -----------------------------
             //
             //===============================================================================//
-
+            if(data.length>0){
             //creating the first table header
         
     
@@ -90,6 +94,13 @@ button.addEventListener('click',()=>{
                 }
             }
            
+            }else{
+                alert(`Sorry. Couldn't find data. Please try again`);
+            }
+        }else{
+            alert(`Handle not found. Please try again.`);
+            
+        }
         })
 
 console.log(prb_name);
