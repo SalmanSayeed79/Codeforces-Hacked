@@ -13,7 +13,7 @@ var prb_id=[];
 button.addEventListener('click',()=>{
     let handle_value=handle.value;
     let count_value=count.value;
-    let url=`http://codeforces.com/api/user.status?handle=${handle_value}&from=1&count=${count_value}`
+    let url=`https://codeforces.com/api/user.status?handle=${handle_value}&from=1&count=${count_value}`
     fetch(url)
         .then(response=>{
             return response.json();
